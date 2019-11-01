@@ -6,5 +6,10 @@ CoPD is a competition that we are hosting, this repo has the website to help man
 among other things be used for creating and managing teams and eventually submitting entries to the competition<br/>
 _[TODO: Add more information]_
 _____
+#### Notable branches:
+- [Master](https://github.com/dkantereivin/programming-discord-bot): Default branch 
+- [feature/userpage](https://github.com/dkantereivin/programming-discord-bot/tree/feature/userpage): The creation of the userpage
+- [feature/navigation](https://github.com/dkantereivin/programming-discord-bot/tree/feature/userpage): The creation of the navigation bar
+_____
 __Deadline:__ _[TODO: Add deadline]_<br/>
 __Languages:__ javascript
