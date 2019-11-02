@@ -1,20 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
-function App() {
-  return (
-      <React.Fragment>
-        <div className="navbar">
-            <ul>
-                <li>
-                    Example content
-                </li>
-                <li>
-                    Example content 2
-                </li>
-            </ul>
-        </div>
-      </React.Fragment>
-  );
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            links: [
+                {
+                    title: "🏠 Home",
+                    link: "/",
+                    exact: true,
+                },
+                {
+                    title: "ℹ Project information",
+                    link: "/info",
+                    exact: false,
+                },
+            ].concat(props.links ? props.links : []).reverse()
+        };
+    }
+    render () {
+        return (
+            <React.Fragment>
+                <ul className="navbar">
+                    {
+                        this.state.links.map((link) => {
+                            return (
+                                <NavLink exact={link.exact} to={link.link} activeClassName="active">
+                                    <p>
+                                        {link.title}
+                                    </p>
+                                </NavLink>
+                            );
+                        })
+                    }
+                </ul>
+            </React.Fragment>
+      );
+  }
 }
 
 export default App;
