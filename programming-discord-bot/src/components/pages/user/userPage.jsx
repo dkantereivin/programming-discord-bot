@@ -11,7 +11,7 @@ import ListGroup from 'react-bootstrap/ListGroup'
 class UserPage extends React.Component {
     state = {
         functions: 1,
-        activeTab: 1,
+        activeTab: 0,
         users: [],
     };
 
@@ -31,11 +31,16 @@ class UserPage extends React.Component {
     render() {
         const activeTab = this.state.activeTab
         let tab;
+        let page;
         if (activeTab === 1) {
             tab = <Col sm="3"><ListGroup><ListGroup.Item><Button className="btn-circle">+</Button>Add a team member</ListGroup.Item></ListGroup></Col>
+            page = null
         } else if (activeTab === 2) {
             tab = <Col sm="3"><ListGroup><ListGroup.Item><Button className="btn-circle">+</Button> Add a user</ListGroup.Item></ListGroup></Col>
+            page = null
         }
+
+
         return (
             <div>
                 <Container>
@@ -48,9 +53,7 @@ class UserPage extends React.Component {
                             </ListGroup>
                         </Col>
                         {tab}
-                        <Col sm="7">
-                            TEST
-                        </Col>
+                        {page}
                     </Row>
                 </Container>
             </div>
