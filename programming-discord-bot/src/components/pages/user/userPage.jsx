@@ -32,9 +32,9 @@ class UserPage extends React.Component {
         const activeTab = this.state.activeTab
         let tab;
         if (activeTab === 1) {
-            tab = <ListGroup><ListGroup.Item><Button className="btn-circle">+</Button>Add a team member</ListGroup.Item></ListGroup>
+            tab = <Col sm="3"><ListGroup><ListGroup.Item><Button className="btn-circle">+</Button>Add a team member</ListGroup.Item></ListGroup></Col>
         } else if (activeTab === 2) {
-            tab = <ListGroup><ListGroup.Item><Button className="btn-circle">+</Button> Add a user</ListGroup.Item></ListGroup>
+            tab = <Col sm="3"><ListGroup><ListGroup.Item><Button className="btn-circle">+</Button> Add a user</ListGroup.Item></ListGroup></Col>
         }
         return (
             <div>
@@ -47,9 +47,7 @@ class UserPage extends React.Component {
                                 <ListGroup.Item>Submit</ListGroup.Item>
                             </ListGroup>
                         </Col>
-                        <Col sm="3">
-                            {tab}
-                        </Col>
+                        {tab}
                         <Col sm="7">
                             TEST
                         </Col>
