@@ -13,6 +13,7 @@ class UserPage extends React.Component {
         functions: 1,
         activeTab: 0,
         users: [],
+        activePage: 0
     };
 
     changeStateFunctionsTab = () => {
@@ -27,17 +28,35 @@ class UserPage extends React.Component {
         this.state.activeTab === 2 ? this.setState({ activeTab: 0 }) : this.setState({ activeTab: 2 })
     }
 
+    addUser = () => {
+        this.state.activePage !== 1 ? this.setState({ activePage: 1 }) : this.setState({ activePage: 1 })
+    }
+
+    addTeamMember = () => {
+        this.state.activePage !== 2 ? this.setState({ activePage: 2 }) : this.setState({ activePage: 2 })
+    }
+
 
     render() {
         const activeTab = this.state.activeTab
+        const activePage = this.state.activePage
         let tab;
-        let page;
+        let page = <p>Default page works!</p>
         if (activeTab === 1) {
-            tab = <Col sm="3"><ListGroup><ListGroup.Item><Button className="btn-circle">+</Button>Add a team member</ListGroup.Item></ListGroup></Col>
-            page = null
+            tab = <Col sm="3"><ListGroup><ListGroup.Item onClick={this.addTeamMember}><Button className="btn-circle">+</Button>Add a team member</ListGroup.Item></ListGroup></Col>
+
+
         } else if (activeTab === 2) {
-            tab = <Col sm="3"><ListGroup><ListGroup.Item><Button className="btn-circle">+</Button> Add a user</ListGroup.Item></ListGroup></Col>
-            page = null
+            tab = <Col sm="3"><ListGroup><ListGroup.Item onClick={this.addUser}><Button className="btn-circle" >+</Button> Add a user</ListGroup.Item></ListGroup></Col>
+
+        }
+
+        if (activePage === 1) {
+            page = <Col><p> user page works </p></Col>
+        }
+
+        if (activePage === 2) {
+            page = <Col> <p>team member page works</p> </Col>
         }
 
 
