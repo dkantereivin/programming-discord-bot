@@ -1,0 +1,10 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { NavBar } from './navBar';
+
+it('renders the navbar without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<NavBar />, div);
+    ReactDOM.unmountComponentAtNode(div);
+
+})
