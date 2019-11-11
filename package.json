@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "start": "webpack --config webpack.config.js && node index.js",
+    "build": "webpack --config webpack.config.js",
+    "rebuild": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "consolidate": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "nunjucks": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "webpack": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "babel-core": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-react": "latest",
+    "babel-loader": "^8.0.6",
+    "css-loader": "latest",
+    "style-loader": "latest",
+    "webpack-cli": "latest"
+  }
+}

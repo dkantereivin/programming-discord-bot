@@ -1,0 +1,43 @@
+body {
+    margin-top: 100px;
+}
+.navbar {
+    width: 100%;
+    height: 100px;
+    display: block;
+    background-color: #28c2ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+.navbar a {
+    background-color: #28c2ff;
+    display: inline-block;
+    border-left: 1px solid #89daff;
+    width: 200px;
+    height: 100%;
+    font-size: 2vw;
+    float: right;
+    transition: 1s all;
+    text-decoration: none;
+    color: #173753;
+}
+.navbar a:hover {
+    background-color: #2191fb;
+}
+.navbar a.active {
+    background-color: #142c52;
+    color: #89daff;
+}
+.navbar a p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0;
+    font-size: 30px;
+}
