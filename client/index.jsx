@@ -21,7 +21,7 @@ class App extends React.Component {
               },
           ]}/>
           <Route path="/auth">
-            <Auth client_id={636856968874557442}/>
+            <Auth client_id="636856968874557442"/>
           </Route>
       </Router>
     );
