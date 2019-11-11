@@ -14,7 +14,8 @@
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "latest",
-    "webpack": "latest"
+    "webpack": "latest",
+    "unirest": "latest"
   },
   "devDependencies": {
     "@babel/core": "latest",
