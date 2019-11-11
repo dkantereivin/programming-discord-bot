@@ -1,3 +1,4 @@
+const unirest = require('unirest');
 const setup = (app) => {
     app.get('/auth/callback', (req, res) => {
         authenticateUser(req.query.token, req.query.id, req.query.code, (response, req, res)=> {console.log("success")}, "http://localhost:3000");
