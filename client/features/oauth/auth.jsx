@@ -22,4 +22,4 @@ class OAuth extends Component {
     }
 }
 
-export default ImplicitOauth;
+export default OAuth;
