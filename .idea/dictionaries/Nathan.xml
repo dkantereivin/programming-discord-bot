@@ -1,6 +1,7 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Nathan">
     <words>
+      <w>appname</w>
       <w>csrf</w>
       <w>csurf</w>
       <w>ebadcsrftoken</w>

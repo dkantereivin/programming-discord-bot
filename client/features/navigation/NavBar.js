@@ -22,7 +22,7 @@ class NavBar extends Component {
                     link: `https://discordapp.com/oauth2/authorize?
 client_id=636856968874557442
 &scope=guilds.join identify
-&code=${window.CSRF_TOKEN}
+&state=${window.CSRF_TOKEN}
 &response_type=code
 &redirect_uri=http://localhost:3000/auth/callback`,
                     outlink: true

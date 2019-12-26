@@ -71,6 +71,6 @@ class Bot {
     }
 }
 
-client.login('NjM2ODU2OTY4ODc0NTU3NDQy.XgOmVQ.0Qd3MC-wWDPO6w7uniNhYvEkv0k').then();
+client.login(process.env.DISCORD_BOT_TOKEN).then();
 
 module.exports = Bot;

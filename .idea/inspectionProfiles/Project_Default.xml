@@ -7,6 +7,5 @@
       <option name="myStrictlyCheckGlobalDefinitions" value="true" />
       <option name="myStrictlyCheckProperties" value="false" />
     </inspection_tool>
-    <inspection_tool class="LongLine" enabled="true" level="WARNING" enabled_by_default="true" />
   </profile>
 </component>
