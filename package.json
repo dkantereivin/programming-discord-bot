@@ -1,28 +1,35 @@
 {
+  "name": "copd",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "webpack --config webpack.config.js && node index.js",
-    "build": "webpack --config webpack.config.js",
-    "rebuild": "webpack --config webpack.config.js"
+    "start": "npm install --production && node index.js",
+    "develop": "npm run build && node index.js",
+    "build": "webpack"
   },
   "dependencies": {
-    "body-parser": "latest",
-    "consolidate": "latest",
-    "dotenv": "latest",
-    "express": "latest",
-    "nunjucks": "latest",
-    "prop-types": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-router-dom": "latest",
-    "webpack": "latest"
+    "consolidate": "^0.15.1",
+    "cookie-parser": "~1.4.4",
+    "csurf": "^1.10.0",
+    "debug": "~2.6.9",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "express-session": "^1.17.0",
+    "http-errors": "~1.6.3",
+    "nunjucks": "^3.2.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "style-loader": "^1.1.2",
+    "css-loader": "^3.4.0"
   },
   "devDependencies": {
-    "@babel/core": "latest",
-    "babel-loader": "latest",
-    "@babel/preset-env": "latest",
-    "@babel/preset-react": "latest",
-    "css-loader": "latest",
-    "style-loader": "latest",
-    "webpack-cli": "latest"
+    "webpack-cli": "^3.3.10",
+    "webpack": "^4.41.4",
+    "babel-loader": "^8.0.6",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-env": "^7.7.7"
   }
 }

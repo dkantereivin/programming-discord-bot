@@ -3,6 +3,9 @@
   <head>
     {% include "partials/head.njk" %}
     <title>{{appname}}</title>
+    <script>
+      window.CSRF_TOKEN = "{{csrfToken()}}";
+    </script>
   </head>
   <body>
     <div id="app"/>

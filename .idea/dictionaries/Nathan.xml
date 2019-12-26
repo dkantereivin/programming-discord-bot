@@ -1,11 +1,11 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Nathan">
     <words>
-      <w>appname</w>
-      <w>devmode</w>
-      <w>navbar</w>
-      <w>powercut</w>
-      <w>webstorm</w>
+      <w>csrf</w>
+      <w>csurf</w>
+      <w>ebadcsrftoken</w>
+      <w>outlink</w>
+      <w>resave</w>
     </words>
   </dictionary>
 </component>
