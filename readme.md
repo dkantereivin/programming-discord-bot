@@ -15,11 +15,6 @@ Here are the current tasks that need to be done *(Checked is in progress tasks)*
 - [x] Create a team creation page
 - [x] Create a team management page
 - [x] Create oauth [Backend required]
-#### What shouldn't I do?
-Canter has requested that the server-side development is not started yet; if you want to do server side please obtain permission from canter or additionally implement an alternative in your code. If you are doing server side you must do it in a separate module which is then required from the index.js file. This is an example of how it will be required:
-```js
-require("./features/your/feature/index.js")(express_app);
-```
 _____
 #### Notable branches:
 - [Master](https://github.com/dkantereivin/programming-discord-bot): Default branch 

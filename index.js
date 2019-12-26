@@ -19,6 +19,7 @@ app.use(session({
 }));
 app.use(csurf());
 app.use(require('./middleware/add-config'));
+app.use(require('./middleware/authentication'));
 app.use(csrfProtection.attach_handler);
 require('./routes/authentication')(app);
 require('./routes/react-fallback')(app);
