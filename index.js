@@ -24,6 +24,7 @@ app.use(require('./middleware/authentication'));
 app.use(csrfProtection.attach_handler);
 require('./routes/authentication')(app);
 require('./routes/dashboard')(app);
+require('./routes/info')(app);
 require('./routes/api')(app);
 
 

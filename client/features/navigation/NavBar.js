@@ -36,7 +36,7 @@ class NavBar extends Component {
                     if (responseJson.error === "AuthError") {
                         this.setState((previous) => {
                             return {
-                                links: [{
+                                links: previous.links.concat([{
                                     title: "👤 Login",
                                     link: `https://discordapp.com/oauth2/authorize?
 client_id=${window.DISCORD_CLIENT_ID}
@@ -45,19 +45,19 @@ client_id=${window.DISCORD_CLIENT_ID}
 &response_type=code
 &redirect_uri=http://${window.location.host}/auth/callback`,
                                     outlink: true
-                                }].concat(previous.links)
+                                }])
                             }
                         });
                     }
                 } else {
                     this.setState((previous) => {
                         return {
-                            links: [{
+                            links: previous.links.concat([{
                                 title: `Welcome ${responseJson.user.name} - 👥 Dashboard`,
                                 link: `/dashboard`,
                                 outlink: false,
                                 exact: false
-                            }].concat(previous.links)
+                            }])
                         }
                     });
                 }

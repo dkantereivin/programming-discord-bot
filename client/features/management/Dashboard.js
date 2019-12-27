@@ -12,6 +12,7 @@ class NavBar extends Component {
         this.state = {
             users: []
         };
+        this.previous = false;
         this.xmlhttp = new XMLHttpRequest();
     }
 
@@ -49,7 +50,8 @@ client_id=${window.DISCORD_CLIENT_ID}
                 <Switch>
                     <Route path={"/dashboard"} exact={false} children={
                         (match) => {
-                            if (match) {
+                            if (match && !this.previous) {
+                                this.previous = true;
                                 this.xmlhttp.open(
                                     "GET",
                                     "/api/get/team",
@@ -62,7 +64,8 @@ client_id=${window.DISCORD_CLIENT_ID}
                                     `Bearer ${cookie.get("token")}`
                                 );
                                 this.xmlhttp.send();
-                            } else {
+                            } else if (!match && this.previous) {
+                                this.previous = false;
                                 this.xmlhttp.abort();
                             }
                             return null;
@@ -70,32 +73,31 @@ client_id=${window.DISCORD_CLIENT_ID}
                     }/>
                 </Switch>
                 <Route path={"/dashboard"} exact={false}>
-                    <div className="dashboard container">
-                        <ul className="dashboard menu 1">
-                            <NavLink exact={false}
-                                     to={`/dashboard/@me/`}
-                                     activeClassName="active">
-                                <p>
-                                    Your account
-                                </p>
-                            </NavLink>
-                            <NavLink exact={false}
-                                     to={`/dashboard/team/`}
-                                     activeClassName="active">
-                                <p>
-                                    Team info
-                                </p>
-                            </NavLink>
-                            <NavLink exact={false}
-                                     to={`/dashboard/users/`}
-                                     activeClassName="active">
-                                <p>
-                                    Users
-                                </p>
-                            </NavLink>
-                        </ul>
+                    <div className={"dashboard menu-container"}>
+                        <div className="dashboard container">
+                            <ul className="dashboard menu one">
+                                <NavLink exact={false}
+                                         to={`/dashboard/@me/`}
+                                         activeClassName="active">
+                                    <p>Your account</p>
+                                </NavLink>
+                                <NavLink exact={false}
+                                         to={`/dashboard/team/`}
+                                         activeClassName="active">
+                                    <p>Team info</p>
+                                </NavLink>
+                                <NavLink exact={false}
+                                         to={`/dashboard/users/`}
+                                         activeClassName="active">
+                                    <p>Users</p>
+                                </NavLink>
+                            </ul>
+                        </div>
+                        {" "}
+                        <Route path={"/dashboard/users"} exact={false}>
+                            <UserSelectionMenu users={this.state.users}/>
+                        </Route>
                     </div>
-                    <UserSelectionMenu users={this.state.users}/>
                 </Route>
             </React.Fragment>
         );
