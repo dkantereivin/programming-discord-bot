@@ -17,15 +17,20 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
+app.use(cookieParser());
 app.use(csurf());
 app.use(require('./middleware/add-config'));
 app.use(require('./middleware/authentication'));
 app.use(csrfProtection.attach_handler);
 require('./routes/authentication')(app);
+require('./routes/dashboard')(app);
+require('./routes/api')(app);
+
+
 require('./routes/react-fallback')(app);
 
-const discord_handler = require("./classes/bot");
-const bot = new discord_handler(app);
+// const discord_handler = require("./classes/bot");
+// const bot = new discord_handler(app);
 
 app.use(csrfProtection.error_handler);
 

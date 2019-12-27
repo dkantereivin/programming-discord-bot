@@ -1,0 +1,59 @@
+body, html, #app {
+    height: 100%;
+}
+
+#app {
+    overflow: hidden;
+}
+
+.dashboard.container {
+    display: inline-block;
+    table-layout: fixed;
+    width: auto;
+    height: 100%;
+    background-color: #28c2ff;
+    transition: all 1s;
+    padding: 0;
+    margin: 0;
+    border-right: 5px solid #224988;
+}
+
+.dashboard.menu {
+    display: table;
+    table-layout: fixed;
+    width: auto;
+    background-color: #28c2ff;
+    transition: all 1s;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard a {
+    display: table-row;
+    border-left: 1px solid #89daff;
+    height: auto;
+    font-size: 2vw;
+    transition: 1s all;
+    text-decoration: none;
+    color: #224988;
+    overflow: visible;
+}
+
+.dashboard a:hover {
+    background-color: #2191fb;
+}
+
+.dashboard a.active {
+    background-color: #224988;
+    color: #89daff;
+}
+
+.dashboard a p {
+    text-align: center;
+    display: table-cell;
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+    vertical-align: middle;
+    padding: 10px;
+}

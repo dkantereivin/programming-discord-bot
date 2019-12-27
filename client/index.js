@@ -1,8 +1,9 @@
 import React from 'react';
-import { render } from 'react-dom';
+import {render} from 'react-dom';
 import NavBar from "./features/navigation/NavBar";
+import Dashboard from "./features/management/Dashboard";
 import "./main.css";
-import { BrowserRouter as Router } from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class App extends React.Component {
     return (
       <Router>
           <NavBar/>
+          <Dashboard/>
       </Router>
     );
   }

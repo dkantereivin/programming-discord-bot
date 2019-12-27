@@ -1,5 +1,5 @@
 function setup(app) {
-    app.get(['', '/'], (req, res) => {
+    app.get(['/dashboard', '/dashboard/*'], (req, res) => {
         res.render('pages/index');
     });
 }
